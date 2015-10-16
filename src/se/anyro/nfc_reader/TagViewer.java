@@ -42,6 +42,18 @@ import android.view.LayoutInflater;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import java.nio.charset.Charset;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.List;
+import java.util.Locale;
+
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.content.Context;
+import android.util.Log;
+
 /**
  * An {@link Activity} which handles a broadcast of a new tag that the device just discovered.
  */
@@ -309,6 +321,49 @@ public class TagViewer extends Activity {
             content.addView(record.getView(this, inflater, content, i), 1 + i);
             content.addView(inflater.inflate(R.layout.tag_divider, content, false), 2 + i);
         }
+    }
+
+    private static final int HELLO_ID = 1;
+
+    public void notifyUser() {
+
+        final Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+            //
+            //  Look up the notification manager server 
+            NotificationManager nm = 
+              (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+     
+            //
+            //  Create your notification 
+            int icon = R.drawable.icon;
+            CharSequence tickerText = "Hello";
+            long when = System.currentTimeMillis();
+     
+            Notification notification = 
+                new Notification( icon, tickerText, when);
+     
+            Context context = getApplicationContext();
+            CharSequence contentTitle = "CX412";
+            CharSequence contentText = "Your flight booking is complete. Enjoy your trip!";
+            Intent notificationIntent = 
+                new Intent(this, TagViewer.class);
+            PendingIntent contentIntent = 
+                PendingIntent.getActivity(this, 0, notificationIntent, 0);
+     
+            notification.setLatestEventInfo(
+                context, 
+                contentTitle, 
+                contentText, 
+                contentIntent);
+     
+            // 
+            //  Send the notification
+            nm.notify( HELLO_ID, notification );
+            }
+        }, 3000);
     }
 
     @Override
