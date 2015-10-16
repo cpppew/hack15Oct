@@ -59,6 +59,25 @@ public class TagViewer extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        
+        
+      //Deeplink & Locate page
+        //TODO: move to resolveIntent()
+        String scheme = getIntent().getScheme();
+        if( scheme == "pageone") {
+        	
+        } else if( scheme == "pagetwo") {
+        	
+        } else if( scheme == "pagethree") {
+        	
+        } else if( scheme == "pagefour") {
+        	
+        } else if( scheme == "pagefive") {
+        	
+        } else {
+        	//default
+        }
+        
         setContentView(R.layout.tag_viewer);
         mTagContent = (LinearLayout) findViewById(R.id.list);
         resolveIntent(getIntent());

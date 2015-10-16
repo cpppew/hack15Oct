@@ -42,6 +42,76 @@
                 <action android:name="android.nfc.action.TAG_DISCOVERED"/>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
+            <intent-filter>
+              <action android:name="android.intent.action.VIEW"/>
+              <category android:name="android.intent.category.BROWSABLE"/>
+              <category android:name="android.intent.category.DEFAULT"/>
+              <data android:scheme="pageone"/>
+              <data android:pathPattern=".*"/>
+            </intent-filter>
+            <intent-filter>
+              <action android:name="android.intent.action.VIEW"/>
+              <category android:name="android.intent.category.BROWSABLE"/>
+              <category android:name="android.intent.category.DEFAULT"/>
+              <data android:scheme="pagetwo"/>
+              <data android:pathPattern=".*"/>
+            </intent-filter>
+            <intent-filter>
+              <action android:name="android.intent.action.VIEW"/>
+              <category android:name="android.intent.category.BROWSABLE"/>
+              <category android:name="android.intent.category.DEFAULT"/>
+              <data android:scheme="pagethree"/>
+              <data android:pathPattern=".*"/>
+            </intent-filter>
+            <intent-filter>
+              <action android:name="android.intent.action.VIEW"/>
+              <category android:name="android.intent.category.BROWSABLE"/>
+              <category android:name="android.intent.category.DEFAULT"/>
+              <data android:scheme="pagefour"/>
+              <data android:pathPattern=".*"/>
+            </intent-filter>
+            <intent-filter>
+              <action android:name="android.intent.action.VIEW"/>
+              <category android:name="android.intent.category.BROWSABLE"/>
+              <category android:name="android.intent.category.DEFAULT"/>
+              <data android:scheme="pagefive"/>
+              <data android:pathPattern=".*"/>
+            </intent-filter>
+            <intent-filter>
+              <action android:name="android.intent.action.VIEW"/>
+              <category android:name="android.intent.category.BROWSABLE"/>
+              <category android:name="android.intent.category.DEFAULT"/>
+              <data android:scheme="pagesix"/>
+              <data android:pathPattern=".*"/>
+            </intent-filter>
+            <intent-filter>
+              <action android:name="android.intent.action.VIEW"/>
+              <category android:name="android.intent.category.BROWSABLE"/>
+              <category android:name="android.intent.category.DEFAULT"/>
+              <data android:scheme="pageseven"/>
+              <data android:pathPattern=".*"/>
+            </intent-filter>
+            <intent-filter>
+              <action android:name="android.intent.action.VIEW"/>
+              <category android:name="android.intent.category.BROWSABLE"/>
+              <category android:name="android.intent.category.DEFAULT"/>
+              <data android:scheme="pageeight"/>
+              <data android:pathPattern=".*"/>
+            </intent-filter>
+            <intent-filter>
+              <action android:name="android.intent.action.VIEW"/>
+              <category android:name="android.intent.category.BROWSABLE"/>
+              <category android:name="android.intent.category.DEFAULT"/>
+              <data android:scheme="pagenine"/>
+              <data android:pathPattern=".*"/>
+            </intent-filter>
+            <intent-filter>
+              <action android:name="android.intent.action.VIEW"/>
+              <category android:name="android.intent.category.BROWSABLE"/>
+              <category android:name="android.intent.category.DEFAULT"/>
+              <data android:scheme="pageten"/>
+              <data android:pathPattern=".*"/>
+            </intent-filter>
         </activity>
     </application>
     
